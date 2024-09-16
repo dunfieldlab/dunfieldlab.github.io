@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+//custom fonts
+@font-face {
+	font-family: "bahnschrift";
+	src: url("../assets/fonts/bahnschrift.ttf");
+}
+
+
+
+// Define defaults for each variable.
+
+// $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,"Arial Narrow", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// $base-font-family: 'Calibri', sans-serif;
+$base-font-size:   20px !default;
+$base-font-weight: 100 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$background-color: #fefef3 !default; //background
+$brand-color:      #d82424 !default; //Post names and user details like email, etc.
+
+// Our variables
+$base-font-family: 'bahnschrift','Avenir Next', Helvetica, Arial, sans-serif;
+$mono-font-family: 'Courier New', 'Lucida Sans Typewriter', 'ui-monospace';
+//$base-font-size:   20px;
+$mega-font-size: 100px;
+$h1-font-size: 70px;
+$h2-font-size: 40px;
+$h3-font-size: 30px;
+$h4-font-size: 24px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     20px;
+
+$blue-color: #92b5bd;
+$yellow-color: #ede24e;
+$red-color: #df6d59;
+$purple-color: #6b2339;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    2000px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting",
+  "minima/gradient-bar",
+  "components/post",
+  "components/project",
+  "components/abilities"
+;

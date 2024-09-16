@@ -1,0 +1,58 @@
+.post-list {
+    @extend %clearfix;
+    list-style: none;
+}
+.post {
+    float:left;
+    width: 50%;
+    padding: 0 3em 1em;
+    &:nth-child(odd) {
+        clear:both;
+    }
+}
+.post-read-more-link {
+    text-align: center;
+}
+
+// switch to one column on narrow screens
+@media(max-width:767px) {
+    .post {
+        display: flex;
+        flex-wrap: wrap;
+        float: none;
+        width: 100%;
+    }
+  }
+
+.post-featured {
+    float: none;
+    margin: 0 auto;
+    width: 80%;
+}
+.post-tags {
+    min-height: 50px; //if there's no tag it still takes some space and is aligned
+    text-align: center;
+    margin-left: 0;
+
+    li {
+        display: inline;
+    }
+}
+
+// Single post page
+.post-header {
+    text-align: center;
+}
+.post-meta {
+    color: $blue-color;
+    font-size: $h4-font-size;
+}
+.post-body {
+    width:90%;
+    max-width: 90em;
+    margin: $h2-font-size auto;
+    h1, h2, h3, h4 {
+        max-width: 80%;
+        margin: $h2-font-size auto;
+    }
+}
