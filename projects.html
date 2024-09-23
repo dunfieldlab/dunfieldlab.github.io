@@ -9,7 +9,7 @@ permalink: /projects/
         <h1> {{ page.title }} </h1>
     </header>
     <ul class="project-list">
-        {% for project in site.categories['project'] %}
+        {% for project in site.categories['projects'] %}
             {% include project.html %}
         {% endfor %}
     </ul>
