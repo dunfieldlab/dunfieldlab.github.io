@@ -22,12 +22,14 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
 
 
-{% include code_copy.html %}
+
 {% highlight bash %}
 echo "Hello";
 {% endhighlight %}
+
 
 | Element | Corresponding HTML | Displayed text |
 |-------|--------|---------|
 | pink lady | jazz | macintosh |
 | honeycrisp | granny smith | fuji |
+

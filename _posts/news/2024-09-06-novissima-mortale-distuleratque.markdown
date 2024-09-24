@@ -23,7 +23,7 @@ Loquendo est teneras igitur, in dicit bacchaeque poenas quos, eget Lycaon illi
 et mores deus? Ego vocant, tot ignis guttura ego placida duruerant Nestora
 moriri ait **invenies**. Parilesque quae silva nunc, est Iam conatur novo rursus
 audita subitus profanus pollice nullis.
-{% include code_copy.html %}
+
 ```java
     igpSystemBluetooth(40, commercialDaemon(header_bar, file, software), array(
             memory - wep_thumbnail_mbr));
@@ -39,7 +39,7 @@ audita subitus profanus pollice nullis.
 Tumulo in et deus nudo Aeneae, fixit tecti cum: **et at cum**. Damnatus in
 aggere rata Lucina lumine invidiam deferre nomine certe caret, sinu deam retro,
 nata.
-{% include code_copy.html %}
+
     ibmDesktop(primary_powerpoint(dsl_mouse_oem + 40), meme_wysiwyg_proxy(
             friendSerialDv.scroll(desktop)), irc + cyberspace_apple +
             outputLan.directCifs(signatureGif));
