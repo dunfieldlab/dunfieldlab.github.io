@@ -6,6 +6,7 @@ preBlocks.forEach((preBlock, index) => {
   container = preBlock.parentElement;
   var divAbove = document.createElement("div");
   divAbove.classList.add("code-copy");
+  container.classList.remove("highlight");
   var btn =  divAbove.appendChild(document.createElement('button'));
   btn.classList.add("copy-code-button", "fas", "fa-copy", "fa-xs");
   container.insertBefore(divAbove, preBlock);

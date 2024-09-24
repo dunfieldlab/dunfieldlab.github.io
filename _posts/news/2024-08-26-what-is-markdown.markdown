@@ -20,11 +20,15 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 * img: ![alt text](path/to/image.png)
 * table
 
-
+{% highlight python %}
+print("Hello World!")
+{% endhighlight %}
 
 
 {% highlight bash %}
 echo "Hello";
+cat /
+ls ~
 {% endhighlight %}
 
 
