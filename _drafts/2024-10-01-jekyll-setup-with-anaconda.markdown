@@ -35,7 +35,7 @@ cd my_website
 jekyll serve
 {% endhighlight %}
 Yay! Fantastic! We've got it running. 
-Jekyll has made a website with a following structure:
+Jekyll has made a website with the following structure:
 ```
 my_website/
 ├── 404.html

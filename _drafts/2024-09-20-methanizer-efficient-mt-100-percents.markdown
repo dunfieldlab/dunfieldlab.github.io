@@ -2,7 +2,7 @@
 layout: post
 title:  "Could SRI GC methanizer be more than 100% efficient?"
 date:   2024-09-20 12:52:23 -0600
-categories: blog
+categories: news
 tags: GC Troubleshooting
 --- 
 
