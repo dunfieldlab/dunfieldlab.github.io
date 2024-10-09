@@ -3,6 +3,7 @@ layout: post
 title:  "Website development series #1: Installing Jekyll with Anaconda"
 date:   2024-10-01 13:30:00 -0600
 categories: news tutorials
+featured: true
 tags: www tutorials code
 --- 
 ## Installing Jekyll locally
