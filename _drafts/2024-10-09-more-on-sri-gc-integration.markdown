@@ -7,7 +7,7 @@ featured: false
 tags: GC Troubleshooting
 --- 
 ## Update on GC integration
-In our [previous post on peak integration]({% link _posts/news/2024-09-26-why-methanizer-is-more-than-100.markdown %}) we used manual integration tools to fix peak areas. After a recent call to the tech support on an unrelated issue, they suggested a way of doing it more robustly.
+In our [previous post on peak integration]({% link _posts/news/2024-09-26-why-methanizer-is-more-than-100.markdown %}) we used manual integration tools to fix peak areas. This way works, but it has a **very significant drawback** - we have to fix peak integration each time we have CO and CH<sub>4</sub> close to each other. After a recent call to the tech support on an unrelated issue, they suggested us a way of doing it more robustly.
 
 Basically here is our **"problem"**:
 CO and CH<sub>4</sub> peaks are too close and we have to make sure we integrate them correctly. Pay attention to the bottom part of the graph. Proper integration could get us between 2 and 10% (depending on a run conditions) correction of a peak area as we've seen <a href="why-methanizer-is-more-than-100">before.</a> 
