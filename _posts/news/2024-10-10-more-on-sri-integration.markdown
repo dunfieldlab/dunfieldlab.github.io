@@ -4,7 +4,7 @@ title:  "More on SRI GC peak integration"
 date:   2024-10-09 12:52:23
 categories: news
 featured: false
-tags: GC Troubleshooting
+tags: GC troubleshooting
 --- 
 ## Update on GC integration
 In our [previous post on peak integration]({% link _posts/news/2024-09-26-why-methanizer-is-more-than-100.markdown %}) we used manual integration tools to fix peak areas. This way works, but it has a **very significant drawback** - we have to fix peak integration each time we have CO and CH<sub>4</sub> close to each other. After a recent call to the tech support on an unrelated issue, they suggested us a way of doing it more robustly.
