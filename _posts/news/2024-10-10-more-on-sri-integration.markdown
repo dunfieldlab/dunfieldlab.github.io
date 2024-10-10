@@ -14,7 +14,6 @@ CO and CH<sub>4</sub> peaks are too close and we have to make sure we integrate 
 
 <!-- inserting image with mardown -->
 ![](/images/gc2.1.png){: .himgcenter style="width:auto"}
-
 ## New method settings
 Instead of updating every new chromatogram manually, a tech support engineer suggested we modify our methods as follows. If we go to: *Edit->Channels->Integration* in our PeakSimple software, we can see that Base Line is set for 60.0%.
 
@@ -22,7 +21,7 @@ Instead of updating every new chromatogram manually, a tech support engineer sug
 <img src="/images/gc2.2.png" class="himgcenter" style="width: 40%;">
 
 
-Lowering this parameter is the **solution**. We make the following change 
+Lowering this parameter is the *solution*. We make the following change 
 to get an improved peak integration for all **chromatograms at once**:
 
 *Edit->Channels->Integration->Base line: 1.00*
@@ -30,7 +29,6 @@ to get an improved peak integration for all **chromatograms at once**:
 ![](/images/gc2.3.png){: .himgcenter style="width:40%"}
 
 Now we just have to propagate the new setting in our GC method files.
-
 
 
 
