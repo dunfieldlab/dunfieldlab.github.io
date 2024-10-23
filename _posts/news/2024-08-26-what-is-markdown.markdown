@@ -3,7 +3,7 @@ layout: post
 title:  "What is Markdown?"
 date:   2024-08-26 12:51:23 -0600
 categories: news
-featured: true
+featured: false
 tags: layout design code
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Website development series #1: Installing Jekyll with Anaconda"
-date:   2024-10-01 13:30:00 -0600
+title:  "Git and GitHub 101"
+date:   2024-10-22 13:30:00 -0600
 categories: news
 featured: true
-tags: www tutorials code
+tags: github tutorials code
 --- 
 ## Installing Jekyll locally
 The official way of installing Jekyll could be found [here](https://jekyllrb.com/docs/installation/){:target="_blank"}. As never got it to work for me, here's the approach I used for my local Jekyll installations (both on Ubuntu and WSL). In theory this should also work for any Anaconda, I just haven't tested those.
