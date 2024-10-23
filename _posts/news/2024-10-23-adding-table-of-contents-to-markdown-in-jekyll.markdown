@@ -4,7 +4,7 @@ title:  "Adding Table of Contents to a Markdown Page in Jekyll"
 date:   2024-10-23 13:30:00 -0600
 categories: news
 featured: true
-tags: web tutorials code
+tags: www tutorials code
 --- 
 ## Instal a Jekyll plugin
 To add a TOC that automatically links to our various heading levels within a document (much like in MS Word) we are goint to install and use a jekyll plugin 
