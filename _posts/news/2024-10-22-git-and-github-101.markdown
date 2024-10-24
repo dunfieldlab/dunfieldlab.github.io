@@ -6,97 +6,93 @@ categories: news
 featured: true
 tags: github tutorials code
 --- 
-## Installing Jekyll locally
-The official way of installing Jekyll could be found [here](https://jekyllrb.com/docs/installation/){:target="_blank"}. As never got it to work for me, here's the approach I used for my local Jekyll installations (both on Ubuntu and WSL). In theory this should also work for any Anaconda, I just haven't tested those.
-
-First we create and activate the environment called jekyll:
+Git and GitHub often used interchangeably, but they are different tools and serve different purposes. Git tracks and stores the history of the changes we make in the files of our repository. GitHub is a service allowing us to publish our repositories online and collaborate effectively. Recently GitHub has been bought by Microsoft for a hefty sum of money and the deposited code was usesed to train the automatic programming AI - GitHub Copilot.
+## Git software
+Git is the most popular version control system dating back to the origins of Linux itself and used by all the big tech companies. As a consequence most linux systems, including WSL are already equipped with it. Git is a free and open source with lots and lots of documentations. One such resource is [the Pro Git book](https://github.com/toshimaru/jekyll-toc){:target="_blank"}, available for free, covering all the git aspects at a great depth. It also has links for some videos, tutorials and other, often free books. Speaking of good resources, **Stackoverflow** is another great place if you just want to get it done. Most common problems with git are likely to be already solved there.
+* Git [https://stackoverflow.com/questions/tagged/git](https://stackoverflow.com/questions/tagged/git){:target="_blank"}
+* GitHub [https://stackoverflow.com/questions/tagged/github](https://stackoverflow.com/questions/tagged/github){:target="_blank"}
+* GitHub-Pages [https://stackoverflow.com/questions/tagged/github-pages](https://stackoverflow.com/questions/tagged/github-pages){:target="_blank"}
+### Installing/updating Git if necessary
+If git is not installed on your PC, or you'd like to get it updated, the official reference is a good place to start: [1.5 Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
+### Git Commands organization
+Git commands are organized somewhat like Qiime2. First we type ```git``` followed by a **subcommand** and its parameters if necessary.
+Typing one of the following in our terminal gives us the list of git subcommands:
 ```bash
-conda update conda
-conda create -n jekyll
-source activate jekyll
+git
+git --help
 ```
-Then we need to install all the reqirements:
-{% highlight bash %}
-conda install -c conda-forge c-compiler compilers cxx-compiler
-conda install -c conda-forge ruby 
-gem install jekyll bundler
-{% endhighlight %}
-Then we tell **RubyJems** where to find Ruby:
-
+We could get help, specific to a subcommand accordingly
 ```bash
-ln -s $CONDA_PREFIX/bin/ruby $CONDA_PREFIX/share/rubygems/bin/ 
+git status -h # short version
+git status --help # if you are inclined to read the Linux Git man-pages
 ```
-That's it, now we are ready to go!
-
-## Testing our new install
-Let's create a brand-new website called my_website and serve it locally:
-{% highlight bash %}
-jekyll new my_website
-cd my_website
-jekyll serve
-{% endhighlight %}
-Yay! Fantastic! We've got it running. 
-Jekyll has made a website with the following structure:
+### Basic Git configuration
+These are typically done once, although they could be skipped and configured later.
+There are three levels of configuration: system, global, and user. The system level is not often used, global configurations affect all repositories for a user, and are suitable for a personal PC. Local configurations are **specific to a repository**. To make the configurations local we just use the ```--local``` instead of the ```--global``` flag to our terminal command.
+* Getting help
+Git is super well documented. 
+* User name
+```bash
+# will print our git user name
+git config --global user.name
+# will set our user name to Lionel Messi
+git config --global user.name "Lionel Messi"
 ```
-my_website/
-├── 404.html
-├── Gemfile
-├── Gemfile.lock
-├── _config.yml
-├── _posts
-│   └── 2024-10-01-welcome-to-jekyll.markdown
-├── _site
-│   ├── 404.html
-│   ├── about
-│   │   └── index.html
-│   ├── assets
-│   │   ├── main.css
-│   │   ├── main.css.map
-│   │   └── minima-social-icons.svg
-│   ├── feed.xml
-│   ├── index.html
-│   └── jekyll
-│       └── update
-│           └── 2024
-│               └── 10
-│                   └── 01
-│                       └── welcome-to-jekyll.html
-├── about.markdown
-└── index.markdown
+* User email
+```bash
+# will print our git user email
+git config --global user.email
+# will set our user email to Lionel Messi
+git config --global user.email "lionelmessi@example.com"
 ```
-Here we could note the following:
-* index.markdown: the home page for the website.
-* _config.yml: site settings, could be overrided in individual pages.
-* Gemfile: information about ruby gems, jekyll packages and themes to be installed.
-* _posts folder: is where jekyll actively looks for posts, like this one.
-* assets folder: additional website resourses like documents, images, styles, scripts.
-* _site: a ready-to-serve website compiled by jekyll.
+* To view our current configs typically stored in ```~/.gitconfig``` we could
+```bash
+git config --list #all configs
+git config --global --list #global configs
+``` 
+If we changed our mind or made a mistake we could interact with the ```git config``` command or edit ```~/.gitconfig``` directly. Deleting the file would remove all our settings.
+* We could also set a default text editor. This could be used for editing commit messages and resolve conflicts. The default editor is **vim** which could be difficult, **nano** is another easy terminal editor, but it could be set to anything, really.
+```bash
+git config --global core.editor "nano"
+```
+Here is the [Stackoverflow page](https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages){:target="_blank"} for editor config for different systems.
+* Git aliases. Those could be super handy as they both could save on typing and from memorizing complicated commands.
+The following command would give repository status in a short mode, and is five charactes shorter when we type.
+```bash
+git config --global alias.s "status -s"
+```
+Another good example is the alias for ```git log```. To make our logs more informative we could:
+```bash
+git log --oneline --all --graph --decorate
+```
+As the command is quite long we could make it much shorter by:
+```bash
+git config --global alias.lg "log --oneline --all --graph --decorate"
+```
+We will test our aliases shortly in the next section.
+### Making, getting, and viewing repositories
+To start using most of the Git commands we have to be in a Git repository. We could make any folder into a Git repository by:
+```bash
+git init
+```
+This creates in the current folder a subfolder ```.git``` containing all the repository internals.
 
 
-To view our new website we go to the local server running at the following address [http://127.0.0.1:4000/](http://127.0.0.1:4000/){:target="_blank"}. In our browser and see something like this:
+```bash
+git s
+# this is equivalent to
+git status -s
+```
 
-![](/images/jekyll-new.png){: .himgcenter }
+```bash
+git log
+# this is equivalent to
+git lg
+```
 
-## Useful Jekyll commands
-* Our Gemfile holds the information about the dependencies needed for a project.
-We could install those by funning:
-```bash
-bundle install
-```
-* Then to seve our website with **the specified** dependencies we could:
-```bash
-bundle exec jekyll serve
-```
-* To keep re-generating website when we make updates we could use the **incremental** flag. In some cases we still need to stop and re-start the server.
-```bash
-bundle exec jekyll serve --incremental
-```
-* I found the *incremental* feature often fails on Windows or WSL, so here's the workaround:
-```bash
-bundle exec jekyll serve --watch --force_polling
-```
-* We'd like to include the contents of our _drafts folder:
-```bash
-bundle exec jekyll serve --watch --force_polling --drafts
-```
-## Updates and troubleshooting
+### Adding files: 3-stage process
+#### Ignoring files
+
+### Git Q&A and troubleshooting
+
+
