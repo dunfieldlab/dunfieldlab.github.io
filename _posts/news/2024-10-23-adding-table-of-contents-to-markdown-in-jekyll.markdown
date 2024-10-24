@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Adding Table of Contents to a Markdown Page in Jekyll"
+title:  "Install Jekyll Plugin: Adding Table of Contents to Markdown"
 date:   2024-10-23 13:30:00 -0600
 categories: news
 featured: true
