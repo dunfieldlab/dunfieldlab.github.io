@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Install Jekyll Plugin: Adding Table of Contents to Markdown"
+title:  "Install Jekyll Plugins: Adding Table of Contents to Markdown"
 date:   2024-10-23 13:30:00 -0600
 categories: news
 featured: true
@@ -13,6 +13,10 @@ To add a TOC that automatically links to our various heading levels within a doc
 ```ruby
 #Gemfile
 gem 'jekyll-toc'
+```
+Install our gem
+```bash
+bundle install
 ```
 * Add jekyll-toc to the gems: section in your site's _config.yml.
 
