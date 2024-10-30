@@ -28,7 +28,7 @@ git status -h # short version
 git status --help # if you are inclined to read the Linux Git man-pages
 ```
 ### Basic Git configuration
-These are typically done once, although they could be skipped and configured later.
+These are typically done **once**, although they could be skipped and configured later.
 There are three levels of configuration: system, global, and user. The system level is not often used, global configurations affect all repositories for a user, and are suitable for a personal PC. Local configurations are **specific to a repository**. To make the configurations local we just use the ```--local``` instead of the ```--global``` flag to our terminal command.
 * Getting help
 Git is super well documented. 
@@ -91,9 +91,22 @@ git log
 git lg
 ```
 
-### Adding files: 3-stage process
+### Making changes: 3-stage process
 #### Ignoring files
 
+### Discarding changes
+This will restore the repo to the last commit removing all the uncommited and unstaged chages in our files.
+This is useful if we'd like to test things out without making changes. This doesn't affect the staged files.
+```bash
+git restore .
+```
+If we added some files to a staging area and then decided to unstage them, this is the command:
+```bash
+git reset # or
+git restore  --staged .
+```
+After we **have unstaged** them, we could ```git restore .``` to undo the changes.
+This commands can also be more specific where we use a file/folder name(s) instead of ```.```.
 ### Git Q&A and troubleshooting
 
 
