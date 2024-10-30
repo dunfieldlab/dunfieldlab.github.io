@@ -5,7 +5,7 @@ date:   2024-10-22 13:30:00 -0600
 categories: news
 featured: true
 tags: github tutorials code
-toc: true
+table-of-contents: true
 --- 
 Git and GitHub often used interchangeably, but they are different tools and serve different purposes. Git tracks and stores the history of the changes we make in the files of our repository. GitHub is a service allowing us to publish our repositories online and collaborate effectively. Recently GitHub has been bought by Microsoft for a hefty sum of money and the deposited code was usesed to train the automatic programming AI - GitHub Copilot.
 ## Git software
