@@ -191,6 +191,39 @@ would return us to the state of a previous commit.
 Here is [a great page](hhttps://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git){:target="_blank"} on discarding git commits.
 
 ### Navigating between commits
+Navigating between commits is simple, but one has to be careful. Before we start, it's good to be in a clean state with no uncommitted/unstaged changes.
+
+git checkout [the name of the sha]
+
+You get the sha from doing
+
+git log
+
+Here you see me checking out the initial commit of a repository with hundreds of commits:
+
+$ git checkout 772df05 #  Enough of the sha to be unique, often 6-8 chrs.
+Note: checking out '772df05'.
+
+
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+Again, in the detached HEAD state we have to be careful about modifying files, since it wouldn't affect the most recent commit and potentially could lead to commit conflicts.
+
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 772df05... Initial commit
+
+Looks at files and then...
+
+$ git checkout master
+
 #### git diff
 
 ## GitHub
