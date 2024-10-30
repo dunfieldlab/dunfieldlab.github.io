@@ -114,6 +114,8 @@ git reset --hard HEAD~1
 ```
 would return us to the state of a previous commit.
 Here is [a great page](hhttps://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git){:target="_blank"} on discarding git commits.
-### Git Q&A and troubleshooting
+
+
+## Troubleshooting and useful commands
 
 
