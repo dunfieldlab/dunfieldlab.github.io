@@ -15,9 +15,14 @@ layout: default
      {% endif %}
   </header>
 <div class="post-body">
+<<<<<<< HEAD
   {% if page.table-of-contents == true %}
     {% include toc.html html=content %}
   {% endif %}
   {{ content }}
+=======
+  {{ toc }}
+  {{ content | toc }}
+>>>>>>> 90dc3ab64bbda3b54c4aadf3d7287085d673760d
 </div>
 </article>
