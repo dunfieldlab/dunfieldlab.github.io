@@ -72,24 +72,99 @@ git config --global alias.lg "log --oneline --all --graph --decorate"
 ```
 We will test our aliases shortly in the next section.
 ### Making, getting, and viewing repositories
+
 To start using most of the Git commands we have to be in a Git repository. We could make any folder into a Git repository by:
+#### Making new repos
 ```bash
 git init
 ```
 This creates in the current folder a subfolder ```.git``` containing all the repository internals.
+#### Downloading existing repositories with Git
 
+The most pupular command is: 
+```bash
+git clone /remote/repository/address
+```
+It downloads into the current local folder the entire remote repository.
 
+If we'd like to download a remote repository at some defined stage, for example: commit, tag, or branch, we could use ```git fetch```. For example we could download our website up to a certain commit and try follow along with the code:
+
+```bash
+git fetch https://github.com/dunfieldlab/dunfieldlab.github.io.git
+```
+
+Having created a repository, we could run som git commands providing us with information. For example to display what files are **different** from from our *currrent* commit we could:
 ```bash
 git s
 # this is equivalent to
 git status -s
 ```
-
+To view our commit history:
 ```bash
 git log
-# this is equivalent to
-git lg
+# or
+git lg # this is equivalent to, if we created the alias above
+git lg log --oneline --all --graph --decorate
 ```
+
+#### Example 1
+Let's make a git repo a new Jekyll website. In [our earlier tutorial]({% link _posts/news/2024-10-01-webdev1-install-jekyll-with-conda.markdown %}) we created a blank website in a ```my_website``` folder. Let's follow that example. To refresh, we've done the following:
+{% highlight bash %}
+jekyll new my_website
+cd my_website
+{% endhighlight %}
+Jekyll made for us the following files and folders:
+```
+.gitignore
+404.html
+Gemfile
+Gemfile.lock
+_config.yml
+_posts
+about.markdown
+index.markdown
+```
+Note, Jekyll also created a default ```.gitignore``` file, which we'll check out later.
+
+Let's make this folder into a git repository; the command is the one we saw earlier:
+```bash
+git init
+```
+Now we have another folder, ```.git```, containing the file tracking information within the repo. Deleting ```.git``` would convert my_website to a regular folder and not a git repository.
+```
+.git
+.gitignore
+404.html
+Gemfile
+Gemfile.lock
+_config.yml
+_posts
+about.markdown
+index.markdown
+```
+Then if we try ```git status``` or ```git s```, we see something like the similar:
+```
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        404.html
+        Gemfile
+        Gemfile.lock
+        _config.yml
+        _posts/
+        about.markdown
+        index.markdown
+```
+Git has successfully detected all the new files it detected. We'll add them to git in the next section.
+
+#### Example 2
+Let's view the repository for our own website.
+
+
 
 ### Making changes: 3-stage process
 #### Ignoring files
