@@ -107,6 +107,13 @@ git restore  --staged .
 ```
 After we **have unstaged** them, we could ```git restore .``` to undo the changes.
 This commands can also be more specific where we use a file/folder name(s) instead of ```.```.
+
+How do we undo our git commits? Let's say we'd changed our mind and would like to undo the most recent commit, then the following command
+```bash
+git reset --hard HEAD~1
+```
+would return us to the state of a previous commit.
+Here is [a great page](hhttps://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git){:target="_blank"} on discarding git commits.
 ### Git Q&A and troubleshooting
 
 
