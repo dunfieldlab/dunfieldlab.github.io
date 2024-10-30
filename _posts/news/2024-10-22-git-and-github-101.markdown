@@ -190,7 +190,11 @@ git reset --hard HEAD~1
 would return us to the state of a previous commit.
 Here is [a great page](hhttps://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git){:target="_blank"} on discarding git commits.
 
-
+## GitHub Pages
+https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages
+https://dev.to/davorg/deploying-github-pages-site-with-github-workflows-3bhh
+https://pages.github.com/versions/
+https://talk.jekyllrb.com/t/table-of-contents-displays-locally-but-not-on-github-pages/7860
 ## Troubleshooting and useful commands
 
 
