@@ -15,9 +15,9 @@ layout: default
      {% endif %}
   </header>
 <div class="post-body">
-  {% include toc.html html=content %}
-  {% if page.table-of-contents == true %}
-    
+  
+  {% if page.toc == true %}
+    {% include toc.html html=content %}  
   {% endif %}
   {{ content }}
 </div>
