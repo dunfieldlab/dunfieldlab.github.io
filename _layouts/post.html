@@ -16,7 +16,7 @@ layout: default
   </header>
 <div class="post-body">
   {% if page.toc %}
-  <div>  {%- include toc.html html=content -%} </div>
+   {% include toc_include.html %} 
   {% endif %}
   {{ content }}
 </div>
