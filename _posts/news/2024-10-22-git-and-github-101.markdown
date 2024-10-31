@@ -4,9 +4,11 @@ title:  "Git and GitHub 101"
 date:   2024-10-22 13:30:00 -0600
 categories: news
 featured: true
-tags: github tutorials code
 toc: true
+tags: github tutorials code
 --- 
+{% include toc_include.html %} 
+
 Git and GitHub often used interchangeably, but they are different tools and serve different purposes. Git tracks and stores the history of the changes we make in the files of our repository. GitHub is a service allowing us to publish our repositories online and collaborate effectively. Recently GitHub has been bought by Microsoft for a hefty sum of money and the deposited code was usesed to train the automatic programming AI - GitHub Copilot.
 ## Git software
 Git is the most popular version control system dating back to the origins of Linux itself and used by all the big tech companies. As a consequence most linux systems, including WSL are already equipped with it. Git is a free and open source with lots and lots of documentations. One such resource is [the Pro Git book](https://github.com/toshimaru/jekyll-toc){:target="_blank"}, available for free, covering all the git aspects at a great depth. It also has links for some videos, tutorials and other, often free books. Speaking of good resources, **Stackoverflow** is another great place if you just want to get it done. Most common problems with git are likely to be already solved there.
