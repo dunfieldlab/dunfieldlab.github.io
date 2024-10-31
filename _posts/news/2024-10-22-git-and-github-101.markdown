@@ -4,7 +4,6 @@ title:  "Git and GitHub 101"
 date:   2024-10-22 13:30:00 -0600
 categories: news
 featured: true
-toc: true
 tags: github tutorials code
 --- 
 
@@ -184,7 +183,7 @@ This ensures we have latest version of a repo and minimizes potential merge conf
 #### Adding to a staging area: git add
 Staging area tracks the files about to be commited, this is like a shopping cart. Here we can select/unselect files that we are going to commit. If we are in our ```my_website``` folder
 ```bash
-git commit .
+git add .
 ```
 Will add all files to our staging area.
 We could also add specific files or folders, for example:
