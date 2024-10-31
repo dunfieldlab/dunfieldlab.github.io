@@ -8,7 +8,7 @@ toc: true
 tags: github tutorials code
 --- 
 
-Git and GitHub often used interchangeably, but they are different tools and serve different purposes. Git tracks and stores the history of the changes we make in the files of our repository. GitHub is a service allowing us to publish our repositories online and collaborate effectively. Recently GitHub has been bought by Microsoft for a hefty sum of money and the deposited code was usesed to train the automatic programming AI - GitHub Copilot.
+Git and GitHub often used interchangeably, but they are different tools and serve different purposes. Git tracks and stores the history of the changes we make in the files of our repository. GitHub is a service allowing us to publish our repositories online and collaborate effectively. Recently GitHub has been bought by Microsoft for a hefty sum of money and the deposited code was usesed to train the automatic programming AI - GitHub Copilot. GitHub Pages, on the other hand, offers a free free GitHub hosting and integration service for a Jekyll project.
 ## Git software
 Git is the most popular version control system dating back to the origins of Linux itself and used by all the big tech companies. As a consequence most linux systems, including WSL are already equipped with it. Git is a free and open source with lots and lots of documentations. One such resource is [the Pro Git book](https://git-scm.com/book/en/v2){:target="_blank"}, available for free, covering all the git aspects at a great depth. It also has links for some videos, tutorials and other, often free books. Speaking of good resources, **Stackoverflow** is another great place if you just want to get it done. Most common problems with git are likely to be already solved there.
 * Git [https://stackoverflow.com/questions/tagged/git](https://stackoverflow.com/questions/tagged/git){:target="_blank"}
@@ -192,7 +192,7 @@ would return us to the state of a previous commit.
 Here is [a great page](hhttps://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git){:target="_blank"} on discarding git commits.
 
 ### Navigating between commits
-Navigating between commits is simple, but one has to be careful. Before we start, it's good to be in a clean state with no uncommitted/unstaged changes.
+Navigating between commits is simple, but one has to be careful. Before we start, it's good to be in a clean state with no uncommitted/unstaged changes. Also, it is a good practice to commit/discard any changes before any restructuing our git repository.
 
 git checkout [the name of the sha]
 
@@ -230,10 +230,17 @@ $ git checkout master
 ## GitHub
 
 ## GitHub Pages
-https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages
-https://dev.to/davorg/deploying-github-pages-site-with-github-workflows-3bhh
-https://pages.github.com/versions/
-https://talk.jekyllrb.com/t/table-of-contents-displays-locally-but-not-on-github-pages/7860
+Everything is ready now to try to host our Jekyll website online. It could be a new project, or even a copy of this website. There are several ways of doing it, the most straightforward, in my opinion, is the following:
+1. Create a local repository named your_github_user_name.github.io and commit all changes.
+2. Create an **empty** GitHub repository with the same name.
+3. Push the local repository to GitHub.
+4. Go to your repository's Settings Tab>Pages>Deploy from a branch
+   1. Select which branch to use (typically main)
+   2. Select folder: / (root)
+   
+![](/images/GitHubPages.png){: .himgcenter style="width:auto"}
+
+Maybe in the next section we could share some useful commands and common difficulties using Git-GitHub-GitHub Pages.
 ## Troubleshooting and useful commands
 
 
