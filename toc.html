@@ -78,8 +78,8 @@
     {% assign nodes = include.html | strip | split: '<h' %}
 
     {% assign firstHeader = true %}
-    {% assign currLevel = 1 %}
-    {% assign lastLevel = 1 %}
+    {% assign currLevel = 0 %}
+    {% assign lastLevel = 0 %}
 
     {% capture listModifier %}{% if orderedList %}ol{% else %}ul{% endif %}{% endcapture %}
 
