@@ -100,7 +100,7 @@ To view our commit history:
 git log
 # or
 git lg # this is equivalent to the following ( if we created the alias above)
-git lg log --oneline --all --graph --decorate
+git log --oneline --all --graph --decorate
 ```
 
 #### Example 1
@@ -260,7 +260,7 @@ ssh-keygen -t ed25519 -C "your-github-email@example.com"
 ```
 It's good to enter a passphrase, if we leave the filenames empty, it'll create us the following SSH key pair in our ~/.ssh folder: id_ed25519 and id_ed25519.pub. Do not share the private key. On GitHub we'll use our public key id_ed25519.pub. Click on "New SSH key" and enter the contents of id_ed25519.pub. You could copy it from the output of the following command:
 ```bash
-cat .ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub
 ```
 A more advanced (optional) usage could involve a specific key for a given repository. For example if we are on a shared computer. A strong passphrase is crucial in this case. To link our repo to a specific key, we use the **private** key, but share on GitHub its public (.pub) counterpart as above.
 ```bash
